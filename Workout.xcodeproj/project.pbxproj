@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		F7C563482A2E3469000981B5 /* WorkoutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C563472A2E3469000981B5 /* WorkoutApp.swift */; };
-		F7C5634A2A2E3469000981B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C563492A2E3469000981B5 /* ContentView.swift */; };
 		F7C5634C2A2E346A000981B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C5634B2A2E346A000981B5 /* Assets.xcassets */; };
 		F7C5634F2A2E346A000981B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C5634E2A2E346A000981B5 /* Preview Assets.xcassets */; };
+		F7C563582A2E34D6000981B5 /* WorkoutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C563572A2E34D6000981B5 /* WorkoutListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F7C563442A2E3469000981B5 /* Workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C563472A2E3469000981B5 /* WorkoutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutApp.swift; sourceTree = "<group>"; };
-		F7C563492A2E3469000981B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F7C5634B2A2E346A000981B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7C5634E2A2E346A000981B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F7C563572A2E34D6000981B5 /* WorkoutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +52,8 @@
 			isa = PBXGroup;
 			children = (
 				F7C563472A2E3469000981B5 /* WorkoutApp.swift */,
-				F7C563492A2E3469000981B5 /* ContentView.swift */,
+				F7C563552A2E34AC000981B5 /* Model */,
+				F7C563562A2E34B2000981B5 /* Views */,
 				F7C5634B2A2E346A000981B5 /* Assets.xcassets */,
 				F7C5634D2A2E346A000981B5 /* Preview Content */,
 			);
@@ -65,6 +66,21 @@
 				F7C5634E2A2E346A000981B5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F7C563552A2E34AC000981B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F7C563562A2E34B2000981B5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F7C563572A2E34D6000981B5 /* WorkoutListView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7C5634A2A2E3469000981B5 /* ContentView.swift in Sources */,
+				F7C563582A2E34D6000981B5 /* WorkoutListView.swift in Sources */,
 				F7C563482A2E3469000981B5 /* WorkoutApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
