@@ -12,6 +12,8 @@
 		F7C5634F2A2E346A000981B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C5634E2A2E346A000981B5 /* Preview Assets.xcassets */; };
 		F7C563582A2E34D6000981B5 /* WorkoutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C563572A2E34D6000981B5 /* WorkoutListView.swift */; };
 		F7C5635A2A2E3DE3000981B5 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F7C563592A2E3DE3000981B5 /* db.sqlite */; };
+		F7C5635C2A2E3E8E000981B5 /* AddWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C5635B2A2E3E8E000981B5 /* AddWorkoutView.swift */; };
+		F7C5635F2A2E4194000981B5 /* Blackbird in Frameworks */ = {isa = PBXBuildFile; productRef = F7C5635E2A2E4194000981B5 /* Blackbird */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,7 @@
 		F7C5634E2A2E346A000981B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F7C563572A2E34D6000981B5 /* WorkoutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListView.swift; sourceTree = "<group>"; };
 		F7C563592A2E3DE3000981B5 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
+		F7C5635B2A2E3E8E000981B5 /* AddWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7C5635F2A2E4194000981B5 /* Blackbird in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				F7C563572A2E34D6000981B5 /* WorkoutListView.swift */,
+				F7C5635B2A2E3E8E000981B5 /* AddWorkoutView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -102,6 +107,9 @@
 			dependencies = (
 			);
 			name = Workout;
+			packageProductDependencies = (
+				F7C5635E2A2E4194000981B5 /* Blackbird */,
+			);
 			productName = Workout;
 			productReference = F7C563442A2E3469000981B5 /* Workout.app */;
 			productType = "com.apple.product-type.application";
@@ -130,6 +138,9 @@
 				Base,
 			);
 			mainGroup = F7C5633B2A2E3469000981B5;
+			packageReferences = (
+				F7C5635D2A2E4194000981B5 /* XCRemoteSwiftPackageReference "Blackbird" */,
+			);
 			productRefGroup = F7C563452A2E3469000981B5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -158,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7C563582A2E34D6000981B5 /* WorkoutListView.swift in Sources */,
+				F7C5635C2A2E3E8E000981B5 /* AddWorkoutView.swift in Sources */,
 				F7C563482A2E3469000981B5 /* WorkoutApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +371,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F7C5635D2A2E4194000981B5 /* XCRemoteSwiftPackageReference "Blackbird" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marcoarment/Blackbird";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F7C5635E2A2E4194000981B5 /* Blackbird */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7C5635D2A2E4194000981B5 /* XCRemoteSwiftPackageReference "Blackbird" */;
+			productName = Blackbird;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F7C5633C2A2E3469000981B5 /* Project object */;
 }

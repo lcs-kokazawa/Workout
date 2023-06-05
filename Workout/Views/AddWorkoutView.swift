@@ -1,5 +1,5 @@
 //
-//  WorkoutListView.swift
+//  AddWorkoutView.swift
 //  Workout
 //
 //  Created by Kiho Okazawa on 2023-06-05.
@@ -7,20 +7,21 @@
 
 import SwiftUI
 
-struct WorkoutListView: View {
-    
+struct AddWorkoutView: View {
     //MARK: Stored properties
     
     //MARK: Computed properties
     var body: some View {
-        NavigationView {
+        NavigationView{
             
         }
+        
     }
+        
 }
 
-struct WorkoutListView_Previews: PreviewProvider {
+struct AddWorkoutView_Previews: PreviewProvider {
     static var previews: some View {
-        WorkoutListView()
+        AddWorkoutView()
     }
 }
