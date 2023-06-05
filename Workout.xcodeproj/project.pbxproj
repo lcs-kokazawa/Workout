@@ -11,6 +11,7 @@
 		F7C5634C2A2E346A000981B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C5634B2A2E346A000981B5 /* Assets.xcassets */; };
 		F7C5634F2A2E346A000981B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C5634E2A2E346A000981B5 /* Preview Assets.xcassets */; };
 		F7C563582A2E34D6000981B5 /* WorkoutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C563572A2E34D6000981B5 /* WorkoutListView.swift */; };
+		F7C5635A2A2E3DE3000981B5 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F7C563592A2E3DE3000981B5 /* db.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		F7C5634B2A2E346A000981B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7C5634E2A2E346A000981B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F7C563572A2E34D6000981B5 /* WorkoutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListView.swift; sourceTree = "<group>"; };
+		F7C563592A2E3DE3000981B5 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		F7C563552A2E34AC000981B5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F7C563592A2E3DE3000981B5 /* db.sqlite */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7C5634F2A2E346A000981B5 /* Preview Assets.xcassets in Resources */,
+				F7C5635A2A2E3DE3000981B5 /* db.sqlite in Resources */,
 				F7C5634C2A2E346A000981B5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
