@@ -53,7 +53,7 @@ struct AddWorkoutView: View {
                             Button(action: {
                                 bulgariansplit += 1
                             }, label: {
-                                Image(systemName: "figure.cross.training")
+                                Image(systemName: "dumbbell.fill")
                                 Text("bulgariansplit")
                             })
                             .buttonStyle(.borderedProminent)
@@ -65,7 +65,7 @@ struct AddWorkoutView: View {
                             Button(action: {
                                 hipthrust += 1
                             }, label: {
-                                Image(systemName: "figure.cross.training")
+                                Image(systemName: "dumbbell.fill")
                                 Text("hipthrust")
                             })
                             .buttonStyle(.borderedProminent)
@@ -77,7 +77,7 @@ struct AddWorkoutView: View {
                             Button(action: {
                                 deadlift += 1
                             }, label: {
-                                Image(systemName: "figure.cross.training")
+                                Image(systemName: "figure.strengthtraining.traditional")
                                 Text("deadlift")
                             })
                             .buttonStyle(.borderedProminent)
@@ -89,7 +89,7 @@ struct AddWorkoutView: View {
                             Button(action: {
                                 lunges += 1
                             }, label: {
-                                Image(systemName: "figure.cross.training")
+                                Image(systemName: "figure.strengthtraining.functional")
                                 Text("lunges")
                             })
                             .buttonStyle(.borderedProminent)
@@ -101,7 +101,7 @@ struct AddWorkoutView: View {
                             Button(action: {
                                 legcurl += 1
                             }, label: {
-                                Image(systemName: "figure.cross.training")
+                                Image(systemName: "figure.wrestling")
                                 Text("legcurl")
                             })
                             .buttonStyle(.borderedProminent)
@@ -113,11 +113,11 @@ struct AddWorkoutView: View {
                             Button(action: {
                                 latpulldown += 1
                             }, label: {
-                                Image(systemName: "figure.cross.training")
+                                Image(systemName: "figure.mixed.cardio")
                                 Text("latpulldown")
                             })
                             .buttonStyle(.borderedProminent)
-                            .tint(.green)
+                            .tint(.blue)
                             
                             Text("× \(latpulldown)")
                         }
@@ -125,11 +125,11 @@ struct AddWorkoutView: View {
                             Button(action: {
                                 benchpress += 1
                             }, label: {
-                                Image(systemName: "figure.cross.training")
+                                Image(systemName: "figure.strengthtraining.traditional")
                                 Text("benchpress")
                             })
                             .buttonStyle(.borderedProminent)
-                            .tint(.green)
+                            .tint(.blue)
                             
                             Text("× \(benchpress)")
                         }
@@ -137,13 +137,39 @@ struct AddWorkoutView: View {
                             Button(action: {
                                 reverseflies += 1
                             }, label: {
-                                Image(systemName: "figure.cross.training")
+                                Image(systemName: "dumbbell.fill")
                                 Text("reverseflies")
                             })
                             .buttonStyle(.borderedProminent)
-                            .tint(.green)
+                            .tint(.blue)
                             
                             Text("× \(reverseflies)")
+                        }
+                        HStack{
+                            Button(action: {
+                                seatedrow += 1
+                            }, label: {
+                                Image(systemName: "figure.rower")
+                                Text("seatedrow")
+                            })
+                            .buttonStyle(.borderedProminent)
+                            .tint(.blue)
+                            
+                            Text("× \(seatedrow)")
+                        }
+                    }
+                    Group {
+                        HStack{
+                            Button(action: {
+                                bentooverrow += 1
+                            }, label: {
+                                Image(systemName: "figure.cross.training")
+                                Text("bentooverrow")
+                            })
+                            .buttonStyle(.borderedProminent)
+                            .tint(.blue)
+                            
+                            Text("× \(bentooverrow)")
                         }
                         HStack{
                             Button(action: {
@@ -153,48 +179,24 @@ struct AddWorkoutView: View {
                                 Text("tricepextension")
                             })
                             .buttonStyle(.borderedProminent)
-                            .tint(.green)
+                            .tint(.orange)
                             
                             Text("× \(tricepextension)")
                         }
-                    }
-                    Group {
                         HStack{
                             Button(action: {
                                 bicepcurls += 1
                             }, label: {
-                                Image(systemName: "figure.cross.training")
+                                Image(systemName: "dumbbell.fill")
                                 Text("bicepcurls")
                             })
                             .buttonStyle(.borderedProminent)
-                            .tint(.green)
+                            .tint(.orange)
                             
                             Text("× \(bicepcurls)")
                         }
-                        HStack{
-                            Button(action: {
-                                seatedrow += 1
-                            }, label: {
-                                Image(systemName: "figure.cross.training")
-                                Text("seatedrow")
-                            })
-                            .buttonStyle(.borderedProminent)
-                            .tint(.green)
-                            
-                            Text("× \(seatedrow)")
-                        }
-                        HStack{
-                            Button(action: {
-                                bentooverrow += 1
-                            }, label: {
-                                Image(systemName: "figure.cross.training")
-                                Text("bentooverrow")
-                            })
-                            .buttonStyle(.borderedProminent)
-                            .tint(.green)
-                            
-                            Text("× \(bentooverrow)")
-                        }
+                       
+                        
                         
                     }
                    
