@@ -28,11 +28,14 @@ struct AddWorkoutView: View {
     @State var bicepcurls = 0
     @State var seatedrow = 0
     @State var bentooverrow = 0
+    
+    let columns = [GridItem(.flexible(minimum: 50), alignment: .leading),
+                   GridItem(.flexible(minimum: 50),alignment: .leading)]
     //MARK: Computed properties
     var body: some View {
         NavigationView{
             ScrollView {
-                VStack {
+                LazyVGrid(columns: columns) {
                     HStack{
                         Button(action: {
                             sumosquats += 1
@@ -57,8 +60,104 @@ struct AddWorkoutView: View {
                         
                         Text("× \(bulgariansplit)")
                     }
+                    HStack{
+                        Button(action: {
+                            hipthrust += 1
+                        }, label: {
+                            Image(systemName: "figure.cross.training")
+                            Text("hipthrust")
+                        })
+                        .buttonStyle(.borderedProminent)
+                        .tint(.green)
+                        
+                        Text("× \(hipthrust)")
+                    }
+                    HStack{
+                        Button(action: {
+                            deadlift += 1
+                        }, label: {
+                            Image(systemName: "figure.cross.training")
+                            Text("deadlift")
+                        })
+                        .buttonStyle(.borderedProminent)
+                        .tint(.green)
+                        
+                        Text("× \(deadlift)")
+                    }
+                    HStack{
+                        Button(action: {
+                            lunges += 1
+                        }, label: {
+                            Image(systemName: "figure.cross.training")
+                            Text("lunges")
+                        })
+                        .buttonStyle(.borderedProminent)
+                        .tint(.green)
+                        
+                        Text("× \(lunges)")
+                    }
+                    HStack{
+                        Button(action: {
+                            legcurl += 1
+                        }, label: {
+                            Image(systemName: "figure.cross.training")
+                            Text("legcurl")
+                        })
+                        .buttonStyle(.borderedProminent)
+                        .tint(.green)
+                        
+                        Text("× \(legcurl)")
+                    }
+                    HStack{
+                        Button(action: {
+                            latpulldown += 1
+                        }, label: {
+                            Image(systemName: "figure.cross.training")
+                            Text("latpulldown")
+                        })
+                        .buttonStyle(.borderedProminent)
+                        .tint(.green)
+                        
+                        Text("× \(latpulldown)")
+                    }
+                    HStack{
+                        Button(action: {
+                            benchpress += 1
+                        }, label: {
+                            Image(systemName: "figure.cross.training")
+                            Text("benchpress")
+                        })
+                        .buttonStyle(.borderedProminent)
+                        .tint(.green)
+                        
+                        Text("× \(benchpress)")
+                    }
+                    HStack{
+                        Button(action: {
+                            latpulldown += 1
+                        }, label: {
+                            Image(systemName: "figure.cross.training")
+                            Text("latpulldown")
+                        })
+                        .buttonStyle(.borderedProminent)
+                        .tint(.green)
+                        
+                        Text("× \(latpulldown)")
+                    }
+                    HStack{
+                        Button(action: {
+                            benchpress += 1
+                        }, label: {
+                            Image(systemName: "figure.cross.training")
+                            Text("benchpress")
+                        })
+                        .buttonStyle(.borderedProminent)
+                        .tint(.green)
+                        
+                        Text("× \(benchpress)")
+                    }
             }
-            
+                .padding()
                 
             }
             .navigationTitle("Record Workout")
