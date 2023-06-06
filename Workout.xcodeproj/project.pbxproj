@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F7B724FC2A2FABE2007973CB /* AppDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B724FB2A2FABE2007973CB /* AppDatabase.swift */; };
 		F7C563482A2E3469000981B5 /* WorkoutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C563472A2E3469000981B5 /* WorkoutApp.swift */; };
 		F7C5634C2A2E346A000981B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C5634B2A2E346A000981B5 /* Assets.xcassets */; };
 		F7C5634F2A2E346A000981B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C5634E2A2E346A000981B5 /* Preview Assets.xcassets */; };
@@ -14,9 +15,11 @@
 		F7C5635A2A2E3DE3000981B5 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F7C563592A2E3DE3000981B5 /* db.sqlite */; };
 		F7C5635C2A2E3E8E000981B5 /* AddWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C5635B2A2E3E8E000981B5 /* AddWorkoutView.swift */; };
 		F7C5635F2A2E4194000981B5 /* Blackbird in Frameworks */ = {isa = PBXBuildFile; productRef = F7C5635E2A2E4194000981B5 /* Blackbird */; };
+		F7C563612A2E41F1000981B5 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C563602A2E41F1000981B5 /* Workout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F7B724FB2A2FABE2007973CB /* AppDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatabase.swift; sourceTree = "<group>"; };
 		F7C563442A2E3469000981B5 /* Workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C563472A2E3469000981B5 /* WorkoutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutApp.swift; sourceTree = "<group>"; };
 		F7C5634B2A2E346A000981B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		F7C563572A2E34D6000981B5 /* WorkoutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListView.swift; sourceTree = "<group>"; };
 		F7C563592A2E3DE3000981B5 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
 		F7C5635B2A2E3E8E000981B5 /* AddWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutView.swift; sourceTree = "<group>"; };
+		F7C563602A2E41F1000981B5 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F7B724FA2A2FAB95007973CB /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F7B724FB2A2FABE2007973CB /* AppDatabase.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		F7C5633B2A2E3469000981B5 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				F7C563592A2E3DE3000981B5 /* db.sqlite */,
+				F7C563602A2E41F1000981B5 /* Workout.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -85,6 +98,7 @@
 		F7C563562A2E34B2000981B5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F7B724FA2A2FAB95007973CB /* Helper */,
 				F7C563572A2E34D6000981B5 /* WorkoutListView.swift */,
 				F7C5635B2A2E3E8E000981B5 /* AddWorkoutView.swift */,
 			);
@@ -171,6 +185,8 @@
 				F7C563582A2E34D6000981B5 /* WorkoutListView.swift in Sources */,
 				F7C5635C2A2E3E8E000981B5 /* AddWorkoutView.swift in Sources */,
 				F7C563482A2E3469000981B5 /* WorkoutApp.swift in Sources */,
+				F7C563612A2E41F1000981B5 /* Workout.swift in Sources */,
+				F7B724FC2A2FABE2007973CB /* AppDatabase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
