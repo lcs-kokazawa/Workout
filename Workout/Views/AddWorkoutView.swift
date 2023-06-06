@@ -14,7 +14,7 @@ struct AddWorkoutView: View {
     @Environment(\.blackbirdDatabase) var db: Blackbird.Database?
     //Holds details for the new movie
     @State var date = ""
-    @State var duration = 20
+    @State var duration = 20.0
     @State var sumosquats = 0
     @State var bulgariansplit = 0
     @State var hipthrust = 0
@@ -29,6 +29,10 @@ struct AddWorkoutView: View {
     @State var seatedrow = 0
     @State var bentooverrow = 0
     
+    var durationAsInteger: Int{
+        return Int(duration)
+    }
+    
     let columns = [GridItem(.flexible(minimum: 50), alignment: .leading),
                    GridItem(.flexible(minimum: 50),alignment: .leading)]
     //MARK: Computed properties
@@ -42,7 +46,7 @@ struct AddWorkoutView: View {
                                 sumosquats += 1
                             }, label: {
                                 Image(systemName: "figure.cross.training")
-                                Text("sumosquats")
+                                Text("Sumo Squats")
                             })
                             .buttonStyle(.borderedProminent)
                             .tint(.green)
@@ -54,7 +58,7 @@ struct AddWorkoutView: View {
                                 bulgariansplit += 1
                             }, label: {
                                 Image(systemName: "dumbbell.fill")
-                                Text("bulgariansplit")
+                                Text("Bulgarian Split")
                             })
                             .buttonStyle(.borderedProminent)
                             .tint(.green)
@@ -66,7 +70,7 @@ struct AddWorkoutView: View {
                                 hipthrust += 1
                             }, label: {
                                 Image(systemName: "dumbbell.fill")
-                                Text("hipthrust")
+                                Text("Hipthrust")
                             })
                             .buttonStyle(.borderedProminent)
                             .tint(.green)
@@ -78,7 +82,7 @@ struct AddWorkoutView: View {
                                 deadlift += 1
                             }, label: {
                                 Image(systemName: "figure.strengthtraining.traditional")
-                                Text("deadlift")
+                                Text("Deadlift")
                             })
                             .buttonStyle(.borderedProminent)
                             .tint(.green)
@@ -90,7 +94,7 @@ struct AddWorkoutView: View {
                                 lunges += 1
                             }, label: {
                                 Image(systemName: "figure.strengthtraining.functional")
-                                Text("lunges")
+                                Text("Lunges")
                             })
                             .buttonStyle(.borderedProminent)
                             .tint(.green)
@@ -102,7 +106,7 @@ struct AddWorkoutView: View {
                                 legcurl += 1
                             }, label: {
                                 Image(systemName: "figure.wrestling")
-                                Text("legcurl")
+                                Text("Legcurl")
                             })
                             .buttonStyle(.borderedProminent)
                             .tint(.green)
@@ -114,7 +118,7 @@ struct AddWorkoutView: View {
                                 latpulldown += 1
                             }, label: {
                                 Image(systemName: "figure.mixed.cardio")
-                                Text("latpulldown")
+                                Text("Latpulldown")
                             })
                             .buttonStyle(.borderedProminent)
                             .tint(.blue)
@@ -126,7 +130,7 @@ struct AddWorkoutView: View {
                                 benchpress += 1
                             }, label: {
                                 Image(systemName: "figure.strengthtraining.traditional")
-                                Text("benchpress")
+                                Text("Benchpress")
                             })
                             .buttonStyle(.borderedProminent)
                             .tint(.blue)
@@ -138,7 +142,7 @@ struct AddWorkoutView: View {
                                 reverseflies += 1
                             }, label: {
                                 Image(systemName: "dumbbell.fill")
-                                Text("reverseflies")
+                                Text("Reverseflies")
                             })
                             .buttonStyle(.borderedProminent)
                             .tint(.blue)
@@ -150,7 +154,7 @@ struct AddWorkoutView: View {
                                 seatedrow += 1
                             }, label: {
                                 Image(systemName: "figure.rower")
-                                Text("seatedrow")
+                                Text("Seatedrow")
                             })
                             .buttonStyle(.borderedProminent)
                             .tint(.blue)
@@ -164,7 +168,7 @@ struct AddWorkoutView: View {
                                 bentooverrow += 1
                             }, label: {
                                 Image(systemName: "figure.cross.training")
-                                Text("bentooverrow")
+                                Text("Bentooverrow")
                             })
                             .buttonStyle(.borderedProminent)
                             .tint(.blue)
@@ -176,7 +180,7 @@ struct AddWorkoutView: View {
                                 tricepextension += 1
                             }, label: {
                                 Image(systemName: "figure.cross.training")
-                                Text("tricepextension")
+                                Text("Tricep Extension")
                             })
                             .buttonStyle(.borderedProminent)
                             .tint(.orange)
@@ -188,7 +192,7 @@ struct AddWorkoutView: View {
                                 bicepcurls += 1
                             }, label: {
                                 Image(systemName: "dumbbell.fill")
-                                Text("bicepcurls")
+                                Text("Bicepcurls")
                             })
                             .buttonStyle(.borderedProminent)
                             .tint(.orange)
@@ -202,7 +206,15 @@ struct AddWorkoutView: View {
                    
                     
             }
+            .padding()
+                
+                Text("Record Workout Duration")
+                    .font(.title)
+                    .fontWeight(.bold)
+                
+                Slider(value: $duration, in: 1...180, step: 1.0)
                 .padding()
+                Text("Duration: \(durationAsInteger) minutes")
                 
             }
             .navigationTitle("Record Workout")
@@ -218,5 +230,7 @@ struct AddWorkoutView: View {
 struct AddWorkoutView_Previews: PreviewProvider {
     static var previews: some View {
         AddWorkoutView()
+        //MAKE the database available to all other view through envirnment
+        .environment(\.blackbirdDatabase, AppDatabase.instance)
     }
 }
