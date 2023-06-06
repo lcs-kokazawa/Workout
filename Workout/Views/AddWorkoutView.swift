@@ -17,6 +17,17 @@ struct AddWorkoutView: View {
     @State var duration = 20
     @State var sumosquats = 0
     @State var bulgariansplit = 0
+    @State var hipthrust = 0
+    @State var deadlift = 0
+    @State var lunges = 0
+    @State var legcurl = 0
+    @State var latpulldown = 0
+    @State var benchpress = 0
+    @State var reverseflies = 0
+    @State var tricepextension = 0
+    @State var bicepcurls = 0
+    @State var seatedrow = 0
+    @State var bentooverrow = 0
     //MARK: Computed properties
     var body: some View {
         NavigationView{
