@@ -36,126 +36,169 @@ struct AddWorkoutView: View {
         NavigationView{
             ScrollView {
                 LazyVGrid(columns: columns) {
-                    HStack{
-                        Button(action: {
-                            sumosquats += 1
-                        }, label: {
-                            Image(systemName: "figure.cross.training")
-                            Text("sumosquats")
-                        })
-                        .buttonStyle(.borderedProminent)
-                        .tint(.green)
-                        
-                        Text("× \(sumosquats)")
+                    Group {
+                        HStack{
+                            Button(action: {
+                                sumosquats += 1
+                            }, label: {
+                                Image(systemName: "figure.cross.training")
+                                Text("sumosquats")
+                            })
+                            .buttonStyle(.borderedProminent)
+                            .tint(.green)
+                            
+                            Text("× \(sumosquats)")
+                        }
+                        HStack{
+                            Button(action: {
+                                bulgariansplit += 1
+                            }, label: {
+                                Image(systemName: "figure.cross.training")
+                                Text("bulgariansplit")
+                            })
+                            .buttonStyle(.borderedProminent)
+                            .tint(.green)
+                            
+                            Text("× \(bulgariansplit)")
+                        }
+                        HStack{
+                            Button(action: {
+                                hipthrust += 1
+                            }, label: {
+                                Image(systemName: "figure.cross.training")
+                                Text("hipthrust")
+                            })
+                            .buttonStyle(.borderedProminent)
+                            .tint(.green)
+                            
+                            Text("× \(hipthrust)")
+                        }
+                        HStack{
+                            Button(action: {
+                                deadlift += 1
+                            }, label: {
+                                Image(systemName: "figure.cross.training")
+                                Text("deadlift")
+                            })
+                            .buttonStyle(.borderedProminent)
+                            .tint(.green)
+                            
+                            Text("× \(deadlift)")
+                        }
+                        HStack{
+                            Button(action: {
+                                lunges += 1
+                            }, label: {
+                                Image(systemName: "figure.cross.training")
+                                Text("lunges")
+                            })
+                            .buttonStyle(.borderedProminent)
+                            .tint(.green)
+                            
+                            Text("× \(lunges)")
+                        }
+                        HStack{
+                            Button(action: {
+                                legcurl += 1
+                            }, label: {
+                                Image(systemName: "figure.cross.training")
+                                Text("legcurl")
+                            })
+                            .buttonStyle(.borderedProminent)
+                            .tint(.green)
+                            
+                            Text("× \(legcurl)")
+                        }
+                        HStack{
+                            Button(action: {
+                                latpulldown += 1
+                            }, label: {
+                                Image(systemName: "figure.cross.training")
+                                Text("latpulldown")
+                            })
+                            .buttonStyle(.borderedProminent)
+                            .tint(.green)
+                            
+                            Text("× \(latpulldown)")
+                        }
+                        HStack{
+                            Button(action: {
+                                benchpress += 1
+                            }, label: {
+                                Image(systemName: "figure.cross.training")
+                                Text("benchpress")
+                            })
+                            .buttonStyle(.borderedProminent)
+                            .tint(.green)
+                            
+                            Text("× \(benchpress)")
+                        }
+                        HStack{
+                            Button(action: {
+                                reverseflies += 1
+                            }, label: {
+                                Image(systemName: "figure.cross.training")
+                                Text("reverseflies")
+                            })
+                            .buttonStyle(.borderedProminent)
+                            .tint(.green)
+                            
+                            Text("× \(reverseflies)")
+                        }
+                        HStack{
+                            Button(action: {
+                                tricepextension += 1
+                            }, label: {
+                                Image(systemName: "figure.cross.training")
+                                Text("tricepextension")
+                            })
+                            .buttonStyle(.borderedProminent)
+                            .tint(.green)
+                            
+                            Text("× \(tricepextension)")
+                        }
                     }
-                    HStack{
-                        Button(action: {
-                            bulgariansplit += 1
-                        }, label: {
-                            Image(systemName: "figure.cross.training")
-                            Text("bulgariansplit")
-                        })
-                        .buttonStyle(.borderedProminent)
-                        .tint(.green)
+                    Group {
+                        HStack{
+                            Button(action: {
+                                bicepcurls += 1
+                            }, label: {
+                                Image(systemName: "figure.cross.training")
+                                Text("bicepcurls")
+                            })
+                            .buttonStyle(.borderedProminent)
+                            .tint(.green)
+                            
+                            Text("× \(bicepcurls)")
+                        }
+                        HStack{
+                            Button(action: {
+                                seatedrow += 1
+                            }, label: {
+                                Image(systemName: "figure.cross.training")
+                                Text("seatedrow")
+                            })
+                            .buttonStyle(.borderedProminent)
+                            .tint(.green)
+                            
+                            Text("× \(seatedrow)")
+                        }
+                        HStack{
+                            Button(action: {
+                                bentooverrow += 1
+                            }, label: {
+                                Image(systemName: "figure.cross.training")
+                                Text("bentooverrow")
+                            })
+                            .buttonStyle(.borderedProminent)
+                            .tint(.green)
+                            
+                            Text("× \(bentooverrow)")
+                        }
                         
-                        Text("× \(bulgariansplit)")
                     }
-                    HStack{
-                        Button(action: {
-                            hipthrust += 1
-                        }, label: {
-                            Image(systemName: "figure.cross.training")
-                            Text("hipthrust")
-                        })
-                        .buttonStyle(.borderedProminent)
-                        .tint(.green)
-                        
-                        Text("× \(hipthrust)")
-                    }
-                    HStack{
-                        Button(action: {
-                            deadlift += 1
-                        }, label: {
-                            Image(systemName: "figure.cross.training")
-                            Text("deadlift")
-                        })
-                        .buttonStyle(.borderedProminent)
-                        .tint(.green)
-                        
-                        Text("× \(deadlift)")
-                    }
-                    HStack{
-                        Button(action: {
-                            lunges += 1
-                        }, label: {
-                            Image(systemName: "figure.cross.training")
-                            Text("lunges")
-                        })
-                        .buttonStyle(.borderedProminent)
-                        .tint(.green)
-                        
-                        Text("× \(lunges)")
-                    }
-                    HStack{
-                        Button(action: {
-                            legcurl += 1
-                        }, label: {
-                            Image(systemName: "figure.cross.training")
-                            Text("legcurl")
-                        })
-                        .buttonStyle(.borderedProminent)
-                        .tint(.green)
-                        
-                        Text("× \(legcurl)")
-                    }
-                    HStack{
-                        Button(action: {
-                            latpulldown += 1
-                        }, label: {
-                            Image(systemName: "figure.cross.training")
-                            Text("latpulldown")
-                        })
-                        .buttonStyle(.borderedProminent)
-                        .tint(.green)
-                        
-                        Text("× \(latpulldown)")
-                    }
-                    HStack{
-                        Button(action: {
-                            benchpress += 1
-                        }, label: {
-                            Image(systemName: "figure.cross.training")
-                            Text("benchpress")
-                        })
-                        .buttonStyle(.borderedProminent)
-                        .tint(.green)
-                        
-                        Text("× \(benchpress)")
-                    }
-                    HStack{
-                        Button(action: {
-                            latpulldown += 1
-                        }, label: {
-                            Image(systemName: "figure.cross.training")
-                            Text("latpulldown")
-                        })
-                        .buttonStyle(.borderedProminent)
-                        .tint(.green)
-                        
-                        Text("× \(latpulldown)")
-                    }
-                    HStack{
-                        Button(action: {
-                            benchpress += 1
-                        }, label: {
-                            Image(systemName: "figure.cross.training")
-                            Text("benchpress")
-                        })
-                        .buttonStyle(.borderedProminent)
-                        .tint(.green)
-                        
-                        Text("× \(benchpress)")
-                    }
+                   
+                    
             }
                 .padding()
                 
