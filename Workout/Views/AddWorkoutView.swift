@@ -27,7 +27,7 @@ struct AddWorkoutView: View {
     @State var tricepextension = 0
     @State var bicepcurls = 0
     @State var seatedrow = 0
-    @State var bentooverrow = 0
+    @State var bentoverrow = 0
     
     var durationAsInteger: Int{
         return Int(duration)
@@ -165,15 +165,15 @@ struct AddWorkoutView: View {
                     Group {
                         HStack{
                             Button(action: {
-                                bentooverrow += 1
+                                bentoverrow += 1
                             }, label: {
                                 Image(systemName: "figure.cross.training")
-                                Text("Bentooverrow")
+                                Text("Bentoverrow")
                             })
                             .buttonStyle(.borderedProminent)
                             .tint(.blue)
                             
-                            Text("× \(bentooverrow)")
+                            Text("× \(bentoverrow)")
                         }
                         HStack{
                             Button(action: {
@@ -218,6 +218,72 @@ struct AddWorkoutView: View {
                 
             }
             .navigationTitle("Record Workout")
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button(action: {
+                        //Write to database
+                        Task {
+                            try await db!.transaction { core in
+                                                            try core.query("""
+                                                                        INSERT INTO workout (
+                                                                            date,
+                                                                            duration,
+                                                                            sumosquats,
+                                                                            bulgariansplit,
+                                                                            hipthrust,
+                                                                            deadlift,
+                                                                            lunges,
+                                                                            legcurl,
+                                                                            latpulldown,
+                                                                            benchpress,
+                                                                            reverseflies,
+                                                                            tricepextension,
+                                                                            bicepcurls,
+                                                                            seatedrow,
+                                                                            bentoverrow
+                                                                        )
+                                                                        VALUES (
+                                                                            (?),
+                                                                            (?),
+                                                                            (?),
+                                                                            (?),
+                                                                            (?),
+                                                                            (?),
+                                                                            (?),
+                                                                            (?),
+                                                                            (?),
+                                                                            (?),
+                                                                            (?),
+                                                                            (?),
+                                                                            (?),
+                                                                            (?)
+                                                                        )
+                                                                        """,
+                                                                           date,
+                                                                           duration,
+                                                                           sumosquats,
+                                                                           bulgariansplit,
+                                                                           hipthrust,
+                                                                           deadlift,
+                                                                           lunges,
+                                                                           legcurl,
+                                                                           latpulldown,
+                                                                           benchpress,
+                                                                           reverseflies,
+                                                                           tricepextension,
+                                                                           bicepcurls,
+                                                                           seatedrow,
+                                                                           bentoverrow)
+                            }
+                            //Reset inout fields after writing to database
+                            date = ""
+                            duration = 90
+                        }
+                    }, label: {
+                        Text("Add")
+                    })
+                }
+            }
             
           
         }

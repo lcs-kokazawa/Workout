@@ -24,5 +24,5 @@ struct Workout: BlackbirdModel {
     @BlackbirdColumn var tricepextension: Int
     @BlackbirdColumn var bicepcurls: Int
     @BlackbirdColumn var seatedrow: Int
-    @BlackbirdColumn var bentooverrow: Int
+    @BlackbirdColumn var bentoverrow: Int
 }
