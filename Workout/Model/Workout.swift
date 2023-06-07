@@ -9,7 +9,7 @@ import Blackbird
 import Foundation
 
 struct Workout: BlackbirdModel {
-    
+    @BlackbirdColumn var id : Int
     @BlackbirdColumn var date : String
     @BlackbirdColumn var duration: Int
     @BlackbirdColumn var sumosquats: Int
