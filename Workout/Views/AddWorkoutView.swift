@@ -5,8 +5,9 @@
 //  Created by Kiho Okazawa on 2023-06-05.
 //
 
-import SwiftUI
 import Blackbird
+import SwiftUI
+
 
 struct AddWorkoutView: View {
     //MARK: Stored properties
@@ -39,6 +40,10 @@ struct AddWorkoutView: View {
     var body: some View {
         NavigationView{
             ScrollView {
+                TextField("Enter the date", text: $date)
+                    .textFieldStyle(.roundedBorder)
+                    .padding()
+                
                 LazyVGrid(columns: columns) {
                     Group {
                         HStack{
@@ -221,64 +226,8 @@ struct AddWorkoutView: View {
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button(action: {
-                        //Write to database
-                        Task {
-                            try await db!.transaction { core in
-                                                            try core.query("""
-                                                                        INSERT INTO workout (
-                                                                            date,
-                                                                            duration,
-                                                                            sumosquats,
-                                                                            bulgariansplit,
-                                                                            hipthrust,
-                                                                            deadlift,
-                                                                            lunges,
-                                                                            legcurl,
-                                                                            latpulldown,
-                                                                            benchpress,
-                                                                            reverseflies,
-                                                                            tricepextension,
-                                                                            bicepcurls,
-                                                                            seatedrow,
-                                                                            bentoverrow
-                                                                        )
-                                                                        VALUES (
-                                                                            (?),
-                                                                            (?),
-                                                                            (?),
-                                                                            (?),
-                                                                            (?),
-                                                                            (?),
-                                                                            (?),
-                                                                            (?),
-                                                                            (?),
-                                                                            (?),
-                                                                            (?),
-                                                                            (?),
-                                                                            (?),
-                                                                            (?)
-                                                                        )
-                                                                        """,
-                                                                           date,
-                                                                           duration,
-                                                                           sumosquats,
-                                                                           bulgariansplit,
-                                                                           hipthrust,
-                                                                           deadlift,
-                                                                           lunges,
-                                                                           legcurl,
-                                                                           latpulldown,
-                                                                           benchpress,
-                                                                           reverseflies,
-                                                                           tricepextension,
-                                                                           bicepcurls,
-                                                                           seatedrow,
-                                                                           bentoverrow)
-                            }
-                            //Reset inout fields after writing to database
-                            date = ""
-                            duration = 90
-                        }
+                        addWorkout()
+                        
                     }, label: {
                         Text("Add")
                     })
@@ -289,6 +238,70 @@ struct AddWorkoutView: View {
         }
         
         
+    }
+    
+    //MARK: Functions
+    
+    func addWorkout() {
+        //Write to database
+        Task {
+            try await db!.transaction { core in
+                                            try core.query("""
+                                                        INSERT INTO workout (
+                                                            date,
+                                                            duration,
+                                                            sumosquats,
+                                                            bulgariansplit,
+                                                            hipthrust,
+                                                            deadlift,
+                                                            lunges,
+                                                            legcurl,
+                                                            latpulldown,
+                                                            benchpress,
+                                                            reverseflies,
+                                                            tricepextension,
+                                                            bicepcurls,
+                                                            seatedrow,
+                                                            bentoverrow
+                                                        )
+                                                        VALUES (
+                                                            (?),
+                                                            (?),
+                                                            (?),
+                                                            (?),
+                                                            (?),
+                                                            (?),
+                                                            (?),
+                                                            (?),
+                                                            (?),
+                                                            (?),
+                                                            (?),
+                                                            (?),
+                                                            (?),
+                                                            (?),
+                                                        (?)
+                                                        )
+                                                        """,
+                                                           date,
+                                                           duration,
+                                                           sumosquats,
+                                                           bulgariansplit,
+                                                           hipthrust,
+                                                           deadlift,
+                                                           lunges,
+                                                           legcurl,
+                                                           latpulldown,
+                                                           benchpress,
+                                                           reverseflies,
+                                                           tricepextension,
+                                                           bicepcurls,
+                                                           seatedrow,
+                                                           bentoverrow)
+            }
+            //Reset inout fields after writing to database
+            date = ""
+            duration = 90
+        }
     }
         
 }
